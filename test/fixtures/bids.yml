@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+one:
+  sum: 1
+  lot: one
+  user: u1
+two:
+  sum: 1
+  lot: two
+  user: u2
+
+<% 6.times do |n| %>
+b<%= n %>:
+  sum: <%= "#{100 + n}" %>
+  lot: lot1
+  user: u3
+<% end %>

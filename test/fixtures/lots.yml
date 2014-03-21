@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: u1
+
+two:
+  user: u2
+
+lot1:
+  user: u1
+lot2:
+  user: u3
+lot3:
+  user: u3
