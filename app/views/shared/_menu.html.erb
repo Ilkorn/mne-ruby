@@ -12,10 +12,10 @@
           <% unless user_signed_in? %>
               <li><%= link_to "About us", "/path1"  %></li>
           <% else %>
-              <li><%= link_to "Meetings", "/path1"  %></li>
+              <li><%= link_to "Meetings", page_meetings_path  %></li>
               <li><%= link_to "Place", "/path2"  %></li>
-              <li><%= link_to "Create meeting", "/path3"  %></li>
-              <li><%= link_to "Profile", "/path3"  %></li>
+              <li><%= link_to "Create meeting", page_create_meet_path  %></li>
+              <li><%= link_to "Profile", page_profile_path %></li>
           <% end %>
         </ul>
         <ul class="nav pull-right">

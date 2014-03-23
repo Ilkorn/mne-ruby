@@ -1,10 +1,13 @@
 Mne::Application.routes.draw do
 
 
+  get "page/meetings"
+  get "page/create_meet"
+  get "page/profile"
   get "user/index"
 
   devise_for :users
-  root :to => "user#index"
+  root :to => "page#meetings"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
