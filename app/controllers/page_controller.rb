@@ -8,4 +8,11 @@ class PageController < ApplicationController
 
   def profile
   end
-end
+
+  def about_us
+  end
+
+  def place
+  end
+
+  end
