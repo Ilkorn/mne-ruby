@@ -9,9 +9,22 @@
       <a class="brand" href="#">Mne</a>
       <div class="container nav-collapse">
         <ul class="nav">
-          <li><%= link_to "Meetings", "/path1"  %></li>
-          <li><%= link_to "Place", "/path2"  %></li>
-          <li><%= link_to "Create meeting", "/path3"  %></li>
+          <% unless user_signed_in? %>
+              <li><%= link_to "About us", "/path1"  %></li>
+          <% else %>
+              <li><%= link_to "Meetings", "/path1"  %></li>
+              <li><%= link_to "Place", "/path2"  %></li>
+              <li><%= link_to "Create meeting", "/path3"  %></li>
+              <li><%= link_to "Profile", "/path3"  %></li>
+          <% end %>
+        </ul>
+        <ul class="nav pull-right">
+          <% unless user_signed_in? %>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Sign in", new_user_session_path %></li>
+          <% else %>
+              <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+          <% end %>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
               Language <b class="caret"></b>
