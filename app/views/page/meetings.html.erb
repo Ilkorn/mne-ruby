@@ -1,11 +1,13 @@
 <h1>Page#meets</h1>
 <p>Find me in app/views/page/meets.html.erb</p>
 <div class="panel">
-  <div class="title">Available meets</div>
+  <div class="title">Available meets:</div>
   <div class="content">
     <%  @meets.each do |meet| %>
         <div>
-            <%= meet.id %>(Owner <%= meet.user.first_name %>)
+            <blockquote>
+              ID=<%= meet.id %> (Owner <%= meet.user.first_name %>)
+            </blockquote>
         </div>
     <% end %>
   </div>

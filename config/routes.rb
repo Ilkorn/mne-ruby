@@ -1,12 +1,15 @@
 Mne::Application.routes.draw do
 
-
   get "page/meetings"
   get "page/create_meet"
   get "page/profile"
   get "page/about_us"
   get "page/place"
+
   get "user/index"
+
+  resource :lot, :except => [:show, :edit]
+  get "lot/:id/edit" => "lots#edit"
 
   devise_for :users
   root :to => "page#meetings"
